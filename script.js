@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            currentChat: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -165,7 +166,13 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            methods: {
+                currentChat(index) {
+                    this.currentChat(index) = index;
+                    console.log(this.openChat)
+                }
+            }
         }
     }
 }).mount('#app')

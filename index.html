@@ -51,13 +51,30 @@
                             <span>
                                 <i class="fas fa-search"></i>
                             </span>
-                            <input type="search" placeholder="Cerca o inizia" class="search-input">
+                            <input type="search" placeholder="Cerca o inizia una nuova chat" class="search-input">
                         </div>
     
                         <div class="body-aside">
                             <ul class="users-chats">
-                                <li>
-                                    LISTA JS
+                                <li @click.prevent="currentChat(index)" v-for="(contact, index) in contacts">
+                                    <div class="single-contact">
+                                        <div>
+                                            <img :src="contact.avatar" alt="" />
+                                            <div>
+                                                <h4>
+                                                    {{ contact.name }}
+                                                </h4>
+                                                <p>
+                                                    {{ contact.visible }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="time">
+                                                12.00
+                                            </p>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -91,7 +108,24 @@
 
 
                     <div class="body-chat">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae doloremque fuga impedit assumenda voluptates sapiente alias quaerat, rem, accusamus ullam id corporis reiciendis nobis ab quo expedita numquam neque, ex harum praesentium a architecto molestias. Facere sapiente dolorum perferendis ab odio quod voluptas itaque incidunt maxime. Sed, et hic totam alias quos distinctio molestias nihil architecto aspernatur, possimus soluta, iure impedit sit eaque vel ullam! Itaque, ab assumenda omnis a aspernatur maiores veritatis autem magni repellat velit ratione libero dolores laborum laboriosam illo, optio dolore nemo ipsa nisi ad similique corporis quis? Sit nostrum, laborum, consequuntur aliquid blanditiis repellendus molestias aspernatur voluptatibus molestiae sapiente, nisi ex vel? Illum numquam tempore inventore dignissimos quibusdam molestias odio. Doloribus facere sint minus nobis fugiat, dolore cum est voluptatum non minima nisi excepturi quam architecto magni temporibus perspiciatis natus beatae omnis soluta? Corporis exercitationem, autem voluptates eum ullam quo quisquam quis, tempore sint natus doloribus commodi harum ducimus? Consequuntur quos officiis nesciunt? Aut nobis, at quibusdam reprehenderit harum velit porro dolore maxime cumque nemo ipsum corrupti, atque culpa! Dolorum ipsum illum dolore voluptates fuga nobis totam voluptatem eligendi asperiores odit ipsa aut sequi, doloremque quae laboriosam deserunt minima cum earum, debitis magnam eos repudiandae?
+                        
+                        <div class="sent-messages">
+
+                            <div class="green-messages">
+                                Hai portato in spasso il cane?
+                            </div>
+                            <div class="green-messages"v>
+                                Ricordati di stendere i panni
+                            </div>
+
+                        </div>
+
+                        <div class="received-messages">
+                            <div class="white-messages">
+                                Tutto fatto!
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="footer-chat">

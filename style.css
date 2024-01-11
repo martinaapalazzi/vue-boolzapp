@@ -8,6 +8,7 @@
 
 img {
     width: 100%;
+    display: block;
 }
 
 .profile-pics {
@@ -27,15 +28,13 @@ img {
     width: 100vw;
     height: 100vh;
     padding-top: 30px;
-    background-color: rgb(219, 219, 211);
+    background-color: rgb(255, 0, 0);
 }
 
 .app-container {
     width: 90%;
     height: 95%;
     display: flex;
-    border: 3px red dotted;
-    background-color: blue;
 }
 
 /* ASIDE CONTAINER */
@@ -102,20 +101,35 @@ img {
     list-style-type: none;
 }
 
-/* MAIN CONTAIINER */
+.single-contact {
+    background-color: rgb(200, 255, 200);
+    height: 65px;
+    width: 100%;
+    border-bottom: 1px rgb(49, 49, 49) solid;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.time {
+    font-size: 10px;
+    position: absolute;
+    top: 8px;
+}
+
+/* MAIN CONTAINER */
 
 .chat-container-right{
     width: 60%;
     height: 100%;
     background-color: #E6DDD5;
-    border: 2px rgb(255, 3, 200) solid;
 }
 
 .header-chat {
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #D6D6D6;
 }
@@ -132,6 +146,30 @@ img {
 .body-chat {
     padding: 30px;
     line-height: 1.83em;
+}
+
+.green-messages {
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.white-messages {
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(181, 181, 181);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .footer-chat {
