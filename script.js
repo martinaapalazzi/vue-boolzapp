@@ -5,6 +5,7 @@ createApp({
         return {
             currentChat: 0,
             newMessage: '', 
+            lettersIncluded: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -196,11 +197,31 @@ createApp({
             };
         },
         searchContact: function(){
+            // console.log(this.searchcontact);
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().includes(this.lettersIncluded.toLowerCase().trim())){
+                    contact.visible = true;
+                }else{
+                    contact.visible = false;
+                }    
+            });
+        }
+    }
+}).mount('#app')
+
+
             /* for su contacts */
             /* se contacts[i].name == lettersIncluded
             /* il suo visible diventa true
-            /* altrimenti diventa false
-        }
+            /* altrimenti diventa false */
 
-    }
-}).mount('#app')
+            // let nome = 'noemi';
+            // let array = ['n','o','e','m','i']
+            // console.log(nome[2]);
+            // for (let i = 0; i < contacts.length; i++) {
+            //     if (contacts[i].name == contacts.includes(contacts.length)){
+            //         visible == true;
+            //     }else{
+            //         visible == false;
+            //     }    
+            // }  

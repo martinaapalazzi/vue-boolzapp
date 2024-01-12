@@ -160,6 +160,13 @@ img {
     height: calc(100% - 120px);
 }
 
+.messages-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 .sent-messages {
     display: flex;
     justify-content: flex-end;
@@ -171,15 +178,13 @@ img {
 }
 
 .green-messages {
-    width: 65%;
+    width: 60%;
     max-height: 50px;
     padding: 10px;
     margin: 0px 0px 10px;
     border-radius: 10px;
     background-color: greenyellow;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-self: end;
 }
 
 .white-messages {
@@ -189,9 +194,7 @@ img {
     margin: 0px 0px 10px;
     border-radius: 10px;
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-self: start;
 }
 
 .footer-chat {
