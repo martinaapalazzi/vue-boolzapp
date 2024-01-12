@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             currentChat: 0,
-            newMessage: '',
+            newMessage: '', 
             contacts: [
                 {
                     name: 'Michele',
@@ -179,13 +179,28 @@ createApp({
 
             if (this.newMessage.trim().length > 0) {
                 let newObj = {
-                    date: '10/01/2020 15:51:00', /* data di oggi */
+                    date: '10/01/2020 15:51:00' , /* data di oggi */
                     message: this.newMessage,
                     status: 'sent'
                 };
                 activeContact.messages.push(newObj);
                 this.newMessage = ''
+                setTimeout(()=>{
+                    let messageOkay = {
+                        date: '10/01/2020 15:51:00', /* data di oggi */
+                        message: 'Okay!',
+                        status: 'received'
+                    };
+                    activeContact.messages.push(messageOkay);
+                }, 1000);
             };
         },
-    },
+        searchContact: function(){
+            /* for su contacts */
+            /* se contacts[i].name == lettersIncluded
+            /* il suo visible diventa true
+            /* altrimenti diventa false
+        }
+
+    }
 }).mount('#app')

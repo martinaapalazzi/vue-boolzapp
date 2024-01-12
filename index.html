@@ -51,13 +51,16 @@
                             <span>
                                 <i class="fas fa-search"></i>
                             </span>
-                            <input type="search" placeholder="Cerca o inizia una nuova chat" class="search-input">
+                            <input  type="search"
+                                    placeholder="Cerca o inizia una nuova chat"
+                                    class="search-input"
+                                    v-model="lettersIncluded" @keyup="searchContact">
                         </div>
     
                         <div class="body-aside">
                             <ul class="list-style-none">
                                 <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
-                                    <div class="single-contact">
+                                    <div class="single-contact" v-if="contact.visible == true">
                                         <div class="users-chats" >
                                             <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
                                             <div>
