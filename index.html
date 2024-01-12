@@ -95,7 +95,7 @@
                                     {{ contacts[currentChat].name }}
                                 </h3>
                                 <p>
-                                   <!--Ultimo accesso oggi alle 12.00-->
+                                   Ultimo accesso oggi alle 12.00
                                 </p>
                             </div>
                         </div>
@@ -109,18 +109,10 @@
 
                     <div class="body-chat">
                         
-                        <div class="messages-container sent-messages" v-for="message in contacts[currentChat].messages">
+                        <div class="messages-container" v-for="message in contacts[currentChat].messages">
 
-                            <div class="green-messages">
+                            <div :class=" message.status == 'sent'  ? 'green-messages sent-messages' : 'white-messages received-messages' ">
                                 {{ message.message }}
-                            </div>
-
-                        </div>
-
-                        <div class="messages-container received-messages">
-
-                            <div class="white-messages">
-                                Tutto fatto!
                             </div>
 
                         </div>

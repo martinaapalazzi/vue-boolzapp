@@ -172,7 +172,7 @@ img {
 
 .green-messages {
     width: 65%;
-    height: 30px;
+    max-height: 50px;
     padding: 10px;
     margin: 0px 0px 10px;
     border-radius: 10px;
@@ -184,7 +184,7 @@ img {
 
 .white-messages {
     width: 60%;
-    height: 30px;
+    max-height: 50px;
     padding: 10px;
     margin: 0px 0px 10px;
     border-radius: 10px;

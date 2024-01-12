@@ -175,13 +175,17 @@ createApp({
             this.currentChat = index;
         },
         addNewMessage: function () {
+            const activeContact = this.contacts[this.currentChat];
+
             if (this.newMessage.trim().length > 0) {
                 let newObj = {
-                    message: this.newMessage.trim(),
+                    date: '10/01/2020 15:51:00', /* data di oggi */
+                    message: this.newMessage,
+                    status: 'sent'
                 };
-                this.newMessage.push(newObj);
+                activeContact.messages.push(newObj);
                 this.newMessage = ''
             };
-        }
-    }
+        },
+    },
 }).mount('#app')
