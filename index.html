@@ -55,17 +55,17 @@
                         </div>
     
                         <div class="body-aside">
-                            <ul class="users-chats">
-                                <li @click.prevent="currentChat(index)" v-for="(contact, index) in contacts">
+                            <ul class="list-style-none">
+                                <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
                                     <div class="single-contact">
-                                        <div>
-                                            <img :src="contact.avatar" alt="" />
+                                        <div class="users-chats" >
+                                            <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
                                             <div>
                                                 <h4>
                                                     {{ contact.name }}
                                                 </h4>
                                                 <p>
-                                                    {{ contact.visible }}
+                                                    ultimo messaggio
                                                 </p>
                                             </div>
                                         </div>
@@ -109,21 +109,20 @@
 
                     <div class="body-chat">
                         
-                        <div class="sent-messages">
+                        <div class="messages-container sent-messages" v-for="message in contacts[currentChat].messages">
 
                             <div class="green-messages">
-                                Hai portato in spasso il cane?
-                            </div>
-                            <div class="green-messages"v>
-                                Ricordati di stendere i panni
+                                {{ message.message }}
                             </div>
 
                         </div>
 
-                        <div class="received-messages">
+                        <div class="messages-container received-messages">
+
                             <div class="white-messages">
                                 Tutto fatto!
                             </div>
+
                         </div>
 
                     </div>

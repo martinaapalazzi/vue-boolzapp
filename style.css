@@ -95,17 +95,17 @@ img {
 
 .body-aside {
     padding: 10px;
+    overflow-y: auto;
 }
 
-.users-chats {
+.list-style-none {
     list-style-type: none;
 }
 
 .single-contact {
-    background-color: rgb(200, 255, 200);
-    height: 65px;
     width: 100%;
     border-bottom: 1px rgb(49, 49, 49) solid;
+    padding: 6px;
     display: flex;
     align-items: center;
     position: relative;
@@ -115,6 +115,17 @@ img {
     font-size: 10px;
     position: absolute;
     top: 8px;
+}
+
+.users-chats {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.active {
+    background-color: #cccccccc;
+    opacity: 1;
 }
 
 /* MAIN CONTAINER */
@@ -145,14 +156,24 @@ img {
 
 .body-chat {
     padding: 30px;
-    line-height: 1.83em;
+    height: calc(100% - 120px);
+}
+
+.sent-messages {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.received-messages {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .green-messages {
-    width: 400px;
+    width: 65%;
     height: 30px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px;
     border-radius: 10px;
     background-color: greenyellow;
     display: flex;
@@ -161,10 +182,10 @@ img {
 }
 
 .white-messages {
-    width: 400px;
+    width: 60%;
     height: 30px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px;
     border-radius: 10px;
     background-color: rgb(181, 181, 181);
     display: flex;
