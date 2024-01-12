@@ -88,14 +88,14 @@
                     <div class="header-chat">
                         <div class="person-details">
                             <div>
-                                <img class="profile-pics" src="img/avatar_1.jpg" alt="">
+                                <img class="profile-pics" :src="contacts[currentChat].avatar" alt="">
                             </div>
                             <div class="person-info">
                                 <h3>
-                                    Michele
+                                    {{ contacts[currentChat].name }}
                                 </h3>
                                 <p>
-                                    Ultimo accesso
+                                   <!--Ultimo accesso oggi alle 12.00-->
                                 </p>
                             </div>
                         </div>
@@ -129,7 +129,11 @@
 
                     <div class="footer-chat">
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio" class="search-input">
+                        <input  type="text"
+                                placeholder="Scrivi un messaggio"
+                                class="search-input"
+                                v-model="newMessage"
+                                @keyup.enter="addNewMessage()">
                         <i class="fas fa-microphone"></i>
                     </div>
 

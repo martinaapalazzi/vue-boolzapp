@@ -28,7 +28,7 @@ img {
     width: 100vw;
     height: 100vh;
     padding-top: 30px;
-    background-color: rgb(255, 0, 0);
+    background-color: #009688;
 }
 
 .app-container {
@@ -124,7 +124,7 @@ img {
 }
 
 .active {
-    background-color: #cccccccc;
+    background-color: #E9EBEB;
     opacity: 1;
 }
 
@@ -153,6 +153,7 @@ img {
 .person-info {
     margin-left: 10px;
 }
+
 
 .body-chat {
     padding: 30px;
@@ -187,7 +188,7 @@ img {
     padding: 10px;
     margin: 0px 0px 10px;
     border-radius: 10px;
-    background-color: rgb(181, 181, 181);
+    background-color: #FFFFFF;
     display: flex;
     justify-content: flex-start;
     align-items: center;

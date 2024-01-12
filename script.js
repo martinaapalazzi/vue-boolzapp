@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             currentChat: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -169,9 +170,18 @@ createApp({
             ]
         }
     },
-            methods: {
-                setCurrentChat: function (index) {
-                    this.currentChat = index;
-                }
-            }
+    methods: {
+        setCurrentChat: function (index) {
+            this.currentChat = index;
+        },
+        addNewMessage: function () {
+            if (this.newMessage.trim().length > 0) {
+                let newObj = {
+                    message: this.newMessage.trim(),
+                };
+                this.newMessage.push(newObj);
+                this.newMessage = ''
+            };
+        }
+    }
 }).mount('#app')
