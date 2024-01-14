@@ -215,8 +215,8 @@ createApp({
             /* il suo visible diventa true
             /* altrimenti diventa false */
 
-            // let nome = 'noemi';
-            // let array = ['n','o','e','m','i']
+            // let nome = 'marti';
+            // let array = ['m','a','r','t','i']
             // console.log(nome[2]);
             // for (let i = 0; i < contacts.length; i++) {
             //     if (contacts[i].name == contacts.includes(contacts.length)){

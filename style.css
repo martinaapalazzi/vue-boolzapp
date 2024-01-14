@@ -63,6 +63,10 @@ img {
     margin-left: 10px;
 }
 
+.grey-color {
+    color: #8a8a8a;
+}
+
 .notification-bar {
     width: 100%;
     height: 80px;
