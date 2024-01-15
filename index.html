@@ -36,9 +36,7 @@
                     <div class="main-aside">
 
                         <div class="notification-bar">
-                            <div>
-                                <i class="fa-solid fa-bell-slash" style="color: #ffffff;"></i>
-                            </div>
+                            <i class="fa-solid fa-bell-slash" style="color: #838383;"></i>
                             <div>
                                 <h4>
                                     Ricevi notifiche di nuovi messaggi
@@ -66,9 +64,7 @@
                                         @click.prevent="setCurrentChat(index)">
                                         <div class="single-contact" v-if="contact.visible == true">
                                             <div class="users-chats">
-                                                <div>
-                                                    <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
-                                                </div>
+                                                <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
                                                 <div>
                                                     <h4>
                                                         {{ contact.name }}
@@ -129,7 +125,7 @@
                                 {{ message.message }}
                                 <span>
                                     <i  class="fa-solid fa-caret-down"
-                                        style="color: #616161;"
+                                        style="color: #b9b9b9;"
                                         @click="dropDown()">
                                     </i>
                                 </span>

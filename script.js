@@ -6,6 +6,10 @@ createApp({
             currentChat: 0,
             newMessage: '', 
             lettersIncluded: '',
+            optionsDropDown: [
+                'Check info',
+                'Delete message'
+            ],
             contacts: [
                 {
                     name: 'Michele',
@@ -226,6 +230,11 @@ createApp({
 
             return finalDate;
         },
+        dropDown: function (){
+            this.optionsDropDown
+            
+
+        }
     }
 }).mount('#app')
 
