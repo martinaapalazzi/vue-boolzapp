@@ -26,7 +26,7 @@ img {
 
 .background-container {
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     padding-top: 30px;
     background-color: #009688;
 }
@@ -39,14 +39,14 @@ img {
 
 /* ASIDE CONTAINER */
 
-.main-aside {
-    height: calc(100% - 60px);
-}
-
 .aside-container {
     width: 40%;
     height: 100%;
     background-color: #FEFFFF;
+}
+
+.main-aside {
+    height: calc(100% - 60px);
 }
 
 .header-aside {
@@ -107,6 +107,7 @@ img {
 }
 
 .chat-scroll {
+    height: 100%;
     overflow-y: auto;
 }
 

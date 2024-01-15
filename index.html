@@ -70,13 +70,13 @@
                                                         {{ contact.name }}
                                                     </h4>
                                                     <p>
-                                                        Ultimo messaggio
+                                                        {{ contact.messages[contact.messages.length - 1].message }}
                                                     </p>
                                                 </div>
                                             </div>
                                             <div>
                                                 <p class="time">
-                                                    {{ contacts[currentChat].messages[2].date }}
+                                                    {{ contact.messages[contact.messages.length - 1].date }}
                                                 </p>
                                             </div>
                                         </div>
