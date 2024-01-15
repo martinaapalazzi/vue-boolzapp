@@ -61,7 +61,9 @@
                         <div class="body-aside">
                             <div class="chat-scroll">
                                 <ul class="list-style-none">
-                                    <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
+                                    <li v-for="(contact, index) in contacts"
+                                        :class=" index ==  currentChat ? 'active' : '' "
+                                        @click.prevent="setCurrentChat(index)">
                                         <div class="single-contact" v-if="contact.visible == true">
                                             <div class="users-chats">
                                                 <div>
@@ -121,9 +123,16 @@
                         
                         <div class="messages-container" v-for="(message, index) in contacts[currentChat].messages">
 
-                            <div class="single-message" :class=" message.status == 'sent'  ? 'green-messages sent-messages' : 'white-messages received-messages' ">
+                            <div class="single-message"
+                                :class=" message.status == 'sent'  ? 'green-messages sent-messages' : 'white-messages received-messages' ">
                                <div class="message-style">
                                 {{ message.message }}
+                                <span>
+                                    <i  class="fa-solid fa-caret-down"
+                                        style="color: #616161;"
+                                        @click="dropDown()">
+                                    </i>
+                                </span>
                                </div> 
                                <div class="message-date">
                                 {{ message.date }}

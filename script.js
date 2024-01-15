@@ -225,7 +225,6 @@ createApp({
             finalDate += now.getSeconds().toString().padStart(2, '0');
 
             return finalDate;
-
         },
     }
 }).mount('#app')

@@ -115,27 +115,23 @@ img {
 }
 
 .single-contact {
-    margin-right: 0px;
     border-bottom: 1px rgb(49, 49, 49) solid;
-    padding: 6px;
+    padding: 0px 6px;
     display: flex;
     align-items: center;
     position: relative;
-    border: 2px red dotted;
 }
 
 .users-chats {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px #009688 solid;
 }
 
 .time {
     font-size: 10px;
     position: absolute;
     top: 8px;
-    border: 1px #8EDAFC solid;
 }
 
 .active {
