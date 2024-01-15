@@ -99,6 +99,9 @@ img {
 
 .body-aside {
     padding: 10px;
+}
+
+.chat-scroll {
     overflow-y: auto;
 }
 
@@ -137,7 +140,7 @@ img {
 .chat-container-right{
     width: 60%;
     height: 100%;
-    background-color: #E6DDD5;
+    background-image: url('img/mine.jpg');
 }
 
 .header-chat {
@@ -174,11 +177,33 @@ img {
 .sent-messages {
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
 .received-messages {
     display: flex;
     justify-content: flex-start;
+    position: relative;
+}
+
+.single-message {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+
+.message-style {
+    margin: 0px;
+    line-height: 1.5em;
+}
+
+.message-date {
+    position: absolute;
+    margin-right: 0px;
+    font-size: 0.7em;
+    color: #8a8a8a;
+    right: 0.5em;
+    bottom: 0;
 }
 
 .green-messages {

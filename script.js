@@ -180,7 +180,7 @@ createApp({
 
             if (this.newMessage.trim().length > 0) {
                 let newObj = {
-                    date: '10/01/2020 15:51:00' , /* data di oggi */
+                    date: this.dateOfNow() , /* data di oggi */
                     message: this.newMessage,
                     status: 'sent'
                 };
@@ -188,7 +188,7 @@ createApp({
                 this.newMessage = ''
                 setTimeout(()=>{
                     let messageOkay = {
-                        date: '10/01/2020 15:51:00', /* data di oggi */
+                        date: this.dateOfNow(), /* data di oggi */
                         message: 'Okay!',
                         status: 'received'
                     };
@@ -205,7 +205,28 @@ createApp({
                     contact.visible = false;
                 }    
             });
-        }
+        },
+        dateOfNow: function (){
+            let finalDate = '';
+            const now = new Date ();
+
+            finalDate += now.getDate().toString().padStart(2, '0');
+            finalDate += '/';
+            finalDate += (now.getMonth() + 1).toString().padStart(2, '0'); /* nowMonth + 1 perchè mesi partono da 0 */ 
+            finalDate += '/';
+            finalDate += now.getFullYear();
+
+            finalDate += ' '; 
+
+            finalDate += now.getHours().toString().padStart(2, '0');
+            finalDate += ':';
+            finalDate += now.getMinutes().toString().padStart(2, '0');
+            finalDate += ':';
+            finalDate += now.getSeconds().toString().padStart(2, '0');
+
+            return finalDate;
+
+        },
     }
 }).mount('#app')
 
@@ -225,3 +246,19 @@ createApp({
             //         visible == false;
             //     }    
             // }  
+
+
+
+            /* getCurrentDateTime() {
+                const oggi = new Date();
+                const giorno = oggi.getDate().toString().padStart(2, '0');
+                const mese = (oggi.getMonth() + 1).toString().padStart(2, '0');
+                const anno = oggi.getFullYear();
+                const ore = oggi.getHours().toString().padStart(2, '0');
+                const minuti = oggi.getMinutes().toString().padStart(2, '0');
+                const secondi = oggi.getSeconds().toString().padStart(2, '0');
+            
+                const orarioFinale = `${giorno}/${mese}/${anno} ${ore}:${minuti}:${secondi}`;
+    
+                return orarioFinale;
+            }, */

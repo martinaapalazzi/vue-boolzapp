@@ -59,28 +59,30 @@
                         </div>
     
                         <div class="body-aside">
-                            <ul class="list-style-none">
-                                <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
-                                    <div class="single-contact" v-if="contact.visible == true">
-                                        <div class="users-chats" >
-                                            <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
+                            <div class="chat-scroll">
+                                <ul class="list-style-none">
+                                    <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
+                                        <div class="single-contact" v-if="contact.visible == true">
+                                            <div class="users-chats" >
+                                                <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
+                                                <div>
+                                                    <h4>
+                                                        {{ contact.name }}
+                                                    </h4>
+                                                    <p>
+                                                        Ultimo messaggio
+                                                    </p>
+                                                </div>
+                                            </div>
                                             <div>
-                                                <h4>
-                                                    {{ contact.name }}
-                                                </h4>
-                                                <p>
-                                                    ultimo messaggio
+                                                <p class="time">
+                                                    {{ contacts[currentChat].messages[2].date }}
                                                 </p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <p class="time">
-                                                12.00
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         
                     </div>
@@ -91,7 +93,10 @@
                     <div class="header-chat">
                         <div class="person-details">
                             <div>
-                                <img class="profile-pics" :src="contacts[currentChat].avatar" alt="">
+                                <img
+                                class="profile-pics"
+                                :src="contacts[currentChat].avatar" 
+                                :alt="contacts[currentChat].name">
                             </div>
                             <div class="person-info">
                                 <h3>
@@ -111,13 +116,16 @@
 
 
                     <div class="body-chat">
-
-                        <!-- <img src="img/mine.jpg" alt=""> -->
                         
-                        <div class="messages-container" v-for="message in contacts[currentChat].messages">
+                        <div class="messages-container" v-for="(message, index) in contacts[currentChat].messages">
 
-                            <div :class=" message.status == 'sent'  ? 'green-messages sent-messages' : 'white-messages received-messages' ">
+                            <div class="single-message" :class=" message.status == 'sent'  ? 'green-messages sent-messages' : 'white-messages received-messages' ">
+                               <div class="message-style">
                                 {{ message.message }}
+                               </div> 
+                               <div class="message-date">
+                                {{ message.date }}
+                               </div>
                             </div>
 
                         </div>
