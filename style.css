@@ -116,12 +116,18 @@ img {
 }
 
 .single-contact {
-    width: 100%;
+    margin-right: 0px;
     border-bottom: 1px rgb(49, 49, 49) solid;
     padding: 6px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     position: relative;
+}
+
+.users-chats {
+    display: flex;
+    align-items: center;
 }
 
 .time {
@@ -133,7 +139,7 @@ img {
 .users-chats {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 10px;
 }
 
 .active {
@@ -167,10 +173,10 @@ img {
     margin-left: 10px;
 }
 
-
 .body-chat {
     padding: 30px;
     height: calc(100% - 120px);
+    overflow-y: auto;
 }
 
 .messages-container {

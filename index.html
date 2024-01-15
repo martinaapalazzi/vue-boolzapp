@@ -63,8 +63,10 @@
                                 <ul class="list-style-none">
                                     <li v-for="(contact, index) in contacts" :class=" index ==  currentChat ? 'active' : '' " @click.prevent="setCurrentChat(index)">
                                         <div class="single-contact" v-if="contact.visible == true">
-                                            <div class="users-chats" >
-                                                <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
+                                            <div class="users-chats">
+                                                <div>
+                                                    <img class="profile-pics" :src="contact.avatar" :alt="contact.name" />
+                                                </div>
                                                 <div>
                                                     <h4>
                                                         {{ contact.name }}
